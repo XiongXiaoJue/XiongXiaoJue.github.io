@@ -93,7 +93,7 @@
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">1</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">2</span></li></ul>
               </li>
             
           
@@ -157,6 +157,78 @@
           <h1><a href="/archives/2017" class="archive-year">2017</a></h1>
         </div>
         <div class="post-list">
+    
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/07/24/hexo for blog/" >
+  
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/07/24/hexo for blog/"><span class="article-date">
+  2017-07-24
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-entry">
+        
+          <h1 id="HEXO快速创建个人博客"><a href="#HEXO快速创建个人博客" class="headerlink" title="HEXO快速创建个人博客"></a>HEXO快速创建个人博客</h1><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ul>
+<li><p>安装GIT</p>
+<p>  下载 msysgit 并执行即可完成安装。</p>
+</li>
+<li><p>安装node.js</p>
+<p>  在windows下安装node.js,下载并且安装文件即可，查看node.js版本，在cmd中输入<br>  <code>node -v</code> 用来查看版本</p>
+</li>
+<li><p>download <a href="https://github.com/hexojs/hexo" target="_blank" rel="external">hexo</a></p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3></li>
+</ul>
+<ol>
+<li><p>利用npm安装(cmd或者任意位置git bash)：<br> <code>npm install -g hexo</code></p>
+<p> <em>npm ERR! registry error parsing json 错误</em><br> 可能需要设置npm代理,执行命令<br> <code>npm config set registry http://registry.cnpmjs.org</code></p>
+</li>
+<li><p>创建hexo文件夹</p>
+<p> 在任意一个文件夹下使用git bash，输入以下指令<br> <code>hexo init</code></p>
+</li>
+<li><p>安装依赖包</p>
+<p> <code>npm install</code></p>
+</li>
+<li><p>在本地查看博客</p>
+<p> 在文件夹下执行<br> <code>hexo generate</code>  //生成静态页面<br> <code>hexo server</code>   本地起动，在浏览器中输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
+</li>
+<li><p>在github上建立一个仓库，对应的名字必须是以下格式<br> yourname.github.io</p>
+<p> 在本地的文件夹中有一个_config.yml文件来建立关联：  </p>
+<p> <code>#Hexo Configuration</code><br> <code>## Docs:http://hexo.io/docs/configuration.html</code><br> <code>## Source: https://github.com/hexojs/hexo/</code><br> <code># Site #站点信息</code><br> <code>title: #标题</code><br> <code>subtitle: #副标题</code><br> <code>description: #站点描述，给搜索引擎看的</code><br> <code>author: #作者</code><br> <code>email: #电子邮箱</code><br> <code>language: zh-CN #语言</code><br> <code># URL #链接格式</code><br> <code>url: #网址</code><br> <code>root: / #根目录</code><br> <code>permalink: :year/:month/:day/:title/ #文章的链接格式</code><br> <code>tag_dir: tags #标签目录</code><br> <code>archive_dir: archives #存档目录</code><br> <code>category_dir: categories #分类目录</code><br> <code>code_dir: downloads/code</code><br> <code>permalink_defaults: # Directory #目录</code><br> <code>source_dir: source #源文件目录</code><br> <code>public_dir: public #生成的网页文件目录</code><br> <code># Writing #写作</code><br> <code>new_post_name: :title.md #新文章标题</code><br> <code>default_layout: post #默认的模板，包括 post、page、photo、draft（文章、页面、照片、草稿)</code><br> <code>titlecase: false #标题转换成大写</code><br> <code>external_link: true #在新选项卡中打开连接</code><br> <code>filename_case: 0</code><br> <code>render_drafts: false</code><br> <code>post_asset_folder: false</code><br> <code>relative_link: false</code><br> <code>highlight: #语法高亮</code><br> <code>enable: true #是否启用</code><br> <code>line_number: true#显示行号</code><br> <code>tab_replace: # Category &amp; Tag #分类和标签</code><br> <code>default_category: uncategorized #默认分类</code><br> <code>category_map:</code><br> <code>tag_map:</code><br> <code># Archives</code><br> <code>2: 开启分页</code><br> <code>1: 禁用分页</code><br> <code>0: 全部禁用</code><br> <code>archive: 2</code><br> <code>category: 2</code><br> <code>tag: 2</code><br> <code># Server #本地服务器</code><br> <code>port: 4000 #端口号</code><br> <code>server_ip: localhost #IP 地址</code><br> <code>logger: false</code><br> <code>logger_format: dev</code><br> <code># Date / Time format #日期时间格式</code><br> <code>date_format: YYYY-MM-DD #参考http://momentjs.com/docs/#/displaying/format/</code><br> <code>time_format: H:mm:ss</code><br> <code># Pagination #分页</code><br> <code>per_page: 10 #每页文章数，设置成 0 禁用分页</code><br> <code>pagination_dir: page</code><br> <code># Disqus #Disqus评论，替换为多说</code><br> <code>disqus_shortname:</code><br> <code># Extensions #拓展插件</code><br> <code>theme: landscape-plus #主题</code><br> <code>exclude_generator:</code><br> <code>plugins: #插件，例如生成 RSS 和站点地图的</code><br> <code>- hexo-generator-feed</code><br> <code>- hexo-generator-sitemap</code><br> <code># Deployment #部署</code><br> <code>deploy:</code><br> <code>type: git</code><br> <code>repo: 刚刚github创库地址.git</code><br> <code>branch: master</code></p>
+</li>
+<li><p><code>npm install hexo-deployer-git --save</code>执行命令</p>
+</li>
+<li><p><code>hexo deploy</code></p>
+</li>
+</ol>
+<ol>
+<li><p>常用指令</p>
+<p> <code>hexo help #查看帮助</code><br> <code>hexo init #初始化一个目录</code><br> <code>hexo new &quot;postName&quot; #新建文章</code><br> <code>hexo new page &quot;pageName&quot; #新建页面</code><br> <code>hexo generate #生成网页，可以在 public 目录查看整个网站的文件</code><br> <code>hexo server #本地预览，&#39;Ctrl+C&#39;关闭</code><br> <code>hexo deploy #部署.deploy目录</code><br> <code>hexo clean #清除缓存，**强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹**</code></p>
+</li>
+<li><p>每次修改文件后，直接输入<code>hexo g &amp; hexo d</code>即可更新</p>
+</li>
+</ol>
+
+        
+      </div>
+    </div>
+
+  
+
+  
+  
     
   
 
